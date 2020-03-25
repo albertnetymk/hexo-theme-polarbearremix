@@ -17,9 +17,6 @@ rss: default
 # Menu Settings
 # ===========================================
 menu:
-  Home: /
-  Life: /life
-  Books: /books
   Presentations: /presentations
   Courses: /courses
   Archives: /archives
