@@ -26,7 +26,7 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 {# Fancybox styling #}
 {% if theme.theme.fancybox %}
-  <link rel="stylesheet" type="text/css" href="{{ url_for('lib/fancybox/jquery.fancybox.css') }}" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 {% endif %}
 
 {# Theme Configuration #}
