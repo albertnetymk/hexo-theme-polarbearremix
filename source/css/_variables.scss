@@ -61,7 +61,9 @@ $global-content-margin: 0 auto !default;
 $global-lineheight: 1.5 !default;
 
 // Font family of the site.
-$global-font-family: "Helvetica","Arial","Free Sans","Roboto",sans-serif !default;
+$global-font-family: "Helvetica","Arial","FreeSans","Roboto",sans-serif !default;
+
+$global-header-font-family: "Liberation Sans","Helvetica","Arial",sans-serif !default;
 
 // Background color of the site.
 $global-background: $white !default;
