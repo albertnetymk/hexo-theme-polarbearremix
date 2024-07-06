@@ -44,6 +44,8 @@ baidu_analytics:
 # Google Analytics
 google_analytics:
 
+clarity_analytics:
+
 # Duoshuo
 duoshuo_shortname:
 # Disqus
