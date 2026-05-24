@@ -17,8 +17,6 @@ rss: default
 # Menu Settings
 # ===========================================
 menu:
-  Presentations: /presentations
-  Courses: /courses
   Archives: /archives
   About: /about
 
