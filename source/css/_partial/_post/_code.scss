@@ -10,10 +10,89 @@ code {
   color: $code-color;
 }
 
+.code-block {
+  position: relative;
+  margin: 1em 0;
+
+  .code-copy-button {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 24px;
+    padding: 0;
+    color: $dark-gray;
+    background: darken($code-background, 3%);
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+      color: $global-font-color;
+      background: darken($code-background, 7%);
+    }
+
+    &:focus {
+      color: $theme-color;
+      outline: 2px solid $theme-color;
+      outline-offset: -2px;
+    }
+
+    &.is-copied {
+      color: map-get($code-highlight-color, keyword);
+
+      .code-copy-icon-copy {
+        display: none;
+      }
+
+      .code-copy-icon-check {
+        display: block;
+      }
+    }
+
+  }
+
+  .code-copy-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .code-copy-icon-check {
+    display: none;
+    stroke-width: 2;
+  }
+
+  .code-copy-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .highlight {
+    margin: 0;
+  }
+}
+
 .highlight {
   margin: 1em 0;
   overflow-x: auto;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+
   table {
     position: relative;
 
@@ -22,7 +101,8 @@ code {
       top: 0;
       right: 0;
       left: 0;
-      padding: 2px 7px;
+      box-sizing: border-box;
+      padding: 2px 37px 2px 7px;
       font-size: $code-font-size;
       font-weight: bold;
       color: $gray;
@@ -32,7 +112,7 @@ code {
   }
 
   @each $sign, $text in $code-type-list {
-    &.#{$sign} > ::after {
+    &.#{$sign} > table::after {
       content: $text;
     }
   }
